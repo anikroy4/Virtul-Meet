@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './pages/home'
+import CallRoom from './pages/callroom'
 
 function App() {
 
@@ -11,8 +12,9 @@ function App() {
       index:'true',
       element: <Home/>
     },{
-      path:'/call-room',
-      
+      path:'/call-room/:RoomCode',
+      element:<CallRoom/>
+
     }
   ])
  
